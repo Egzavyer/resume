@@ -12,28 +12,14 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \input{glyphtounicode}
-\usepackage[hidelinks]{hyperref}
-
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
 
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
+\setlength{\footskip}{5pt}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
 \addtolength{\oddsidemargin}{-0.65in}
 \addtolength{\evensidemargin}{-0.65in}
 \addtolength{\textwidth}{1.3in}
@@ -46,16 +32,12 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
-%-------------------------
-% Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
     {#1 \vspace{-3pt}}
@@ -93,112 +75,80 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \begin{document}
 
-%----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
-
 \begin{center}
-    \textbf{\Huge \scshape Xavier Lermusieaux} \\ \vspace{1pt}
-    \href{mailto:xavier.lermusieaux@gmail.com}{xavier.lermusieaux@gmail.com} $|$ 
-    \href{https://linkedin.com/in/xavierlermusieaux/}{linkedin.com/in/xavierlermusieaux/} $|$
-    \href{https://github.com/Egzavyer}{github.com/Egzavyer} $|$
-    \href{https://xavierlermusieaux.com}{xavierlermusieaux.com}
+  \textbf{\Huge Xavier Lermusieaux} \\ \vspace{1pt}
+  \href{mailto:xavier.lermusieaux@gmail.com}{xavier.lermusieaux@gmail.com} $|$
+  \href{https://linkedin.com/in/xavierlermusieaux/}{linkedin.com/in/xavierlermusieaux/} $|$
+  \href{https://github.com/Egzavyer}{github.com/Egzavyer} $|$
+  \href{https://xavierlermusieaux.com}{xavierlermusieaux.com}
 \end{center}
 
-
-%-----------EDUCATION-----------
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {\href{https://www.uottawa.ca/en}{University of Ottawa}}{Ottawa, Canada}
-      {BASc Software Engineering (COOP)}{Expected: Dec. 2026}
-    \resumeItemListStart
-        \resumeItem{\textbf{Scholarships \& Awards}: Dean's Honors List $|$ Admission Academic Merit Scholarship}
-        \resumeItem{\textbf{Relevant Courses}: DSA, Computer Architecture, Operating Systems, Software QA, Databases, Networking}
-        \resumeItem{\textbf{Extracurriculars}: IEEE uOttawa VP Equity $|$ Stratopore CAN-SBX Embedded $|$ WaffleHacks '23 Winner }
-    \resumeItemListEnd
-  \resumeSubHeadingListEnd
-
-
-%-----------EXPERIENCE-----------
-\section{Experience}
-  \resumeSubHeadingListStart
+\resumeSubHeadingListStart
 \resumeSubheading
-      {\href{https://www.rossvideo.com}{Ross Video}}{Ottawa, ON}
-      {Software Developer - Robotics $|$ React, TypeScript, Java Spring Boot}{Term 1:Summer 2025 $|$ Term 2: Summer 2026}
-      \resumeItemListStart
-        \resumeItem{Built an \textbf{interactive, canvas-based graphical editor} in \textbf{React + PixiJS} for designing physical equipment layouts, supporting \textbf{drag-to-move, resize, rotate, and vertex editing} with snap-to-grid, replacing a manual XML workflow and \textbf{cutting setup time by 6+ hours} per deployment.}
-        \resumeItem{Implemented \textbf{optimistic UI updates} over a \textbf{WebSocket} protocol, applying and validating edits \textbf{client-side before server confirmation} with \textbf{automatic rollback} on failure, eliminating perceptible latency during \textbf{real-time editing}.}
-        \resumeItem{Designed a \textbf{reusable 2D geometry and transformation system} (rotation, scaling, coordinate-space conversion) shared across all editor tools, \textbf{reducing duplicated logic} and accelerating delivery of new features.}
-        \resumeItem{Optimized \textbf{rendering performance} for large interactive scenes via \textbf{bounding-box caching and viewport-aware scaling}, reducing redraw work and keeping the UI responsive under heavy load.}
-        \resumeItem{Engineered \textbf{Spring Boot REST and WebSocket endpoints} backed by \textbf{MariaDB}, enabling reliable, low-latency data sync, and conducted \textbf{30+ peer code reviews} enforcing coding standards across the codebase.}
-      \resumeItemListEnd
-    \resumeSubheading
-      {\href{https://ised-isde.canada.ca/site/ised/en}{Innovation, Science and Economic Development Canada (ISED)}}{Ottawa, ON}
-      {Software and Operations Officer $|$ Java, SQL, Apex, VBA, Salesforce}{Term 1: Summer 2023 $|$ Term 2: Fall 2024}
-      \resumeItemListStart
-            \resumeItem{Enhanced regression testing coverage to \textbf{85\%} by designing and writing comprehensive \textbf{unit tests} for Salesforce, reducing manual QA effort by \textbf{40\%}, and accelerating deployment cycles.}
-            \resumeItem{Developed and optimized internal tools using \textbf{VBA and SQL}, automating repetitive tasks and \textbf{boosting team productivity by 90\%} across multiple departments.}
-            \resumeItem{Implemented a Salesforce emailing system notifying up to \textbf{5000 engineers} of KPR updates, \textbf{streamlining communication} across the organization.}
-            \resumeItem{Collaborated with a 12-person engineering team to extend high-speed Internet to remote regions, reviewing LNDs and \textbf{improving connectivity for underserved communities}.}
-            \resumeItem{Analyzed multi-million-dollar telecom invoices and verified program partner designs, optimizing \textbf{project delivery} and ensuring \textbf{on-time completion}.}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
-      
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
+{\href{https://www.uottawa.ca/en}{University of Ottawa}}{Ottawa, Canada}
+{BASc Software Engineering (COOP)}{Expected: Dec. 2026}
+\resumeItemListStart
+\resumeItem{\textbf{Scholarships \& Awards}: Dean's Honors List $|$ Admission Academic Merit Scholarship}
+\resumeItem{\textbf{Relevant Courses}: DSA, Computer Architecture, Operating Systems, Software QA, Databases, Networking}
+\resumeItem{\textbf{Extracurriculars}: IEEE uOttawa VP Equity $|$ Stratopore CAN-SBX Embedded $|$ WaffleHacks '23 Winner }
+\resumeItemListEnd
+\resumeSubHeadingListEnd
 
 
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading
+{\href{https://www.rossvideo.com}{Ross Video}}{Ottawa, ON}
+{Software Developer - Robotics $|$ React, TypeScript, Java Spring Boot}{Term 1:Summer 2025 $|$ Term 2: Summer 2026}
+\resumeItemListStart
+\resumeItem{Built an \textbf{interactive, canvas-based graphical editor} in \textbf{React + PixiJS} for designing physical equipment layouts, supporting \textbf{drag-to-move, resize, rotate, and vertex editing} with snap-to-grid, replacing a manual XML workflow and \textbf{cutting setup time by 6+ hours} per deployment.}
+\resumeItem{Implemented \textbf{optimistic UI updates} over a \textbf{WebSocket} protocol, applying and validating edits \textbf{client-side before server confirmation} with \textbf{automatic rollback} on failure, eliminating perceptible latency during \textbf{real-time editing}.}
+\resumeItem{Designed a \textbf{reusable 2D geometry and transformation system} (rotation, scaling, coordinate-space conversion) shared across all editor tools, \textbf{reducing duplicated logic} and accelerating delivery of new features.}
+\resumeItem{Optimized \textbf{rendering performance} for large interactive scenes via \textbf{bounding-box caching and viewport-aware scaling}, reducing redraw work and keeping the UI responsive under heavy load.}
+\resumeItem{Engineered \textbf{Spring Boot REST and WebSocket endpoints} backed by \textbf{MariaDB}, enabling reliable, low-latency data sync, and conducted \textbf{30+ peer code reviews} enforcing coding standards across the codebase.}
+\resumeItemListEnd
+\resumeSubheading
+{\href{https://ised-isde.canada.ca/site/ised/en}{Innovation, Science and Economic Development Canada (ISED)}}{Ottawa, ON}
+{Software and Operations Officer $|$ Java, SQL, Apex, VBA, Salesforce}{Term 1: Summer 2023 $|$ Term 2: Fall 2024}
+\resumeItemListStart
+\resumeItem{Enhanced regression testing coverage to \textbf{85\%} by designing and writing comprehensive \textbf{unit tests} for Salesforce, reducing manual QA effort by \textbf{40\%}, and accelerating deployment cycles.}
+\resumeItem{Developed and optimized internal tools using \textbf{VBA and SQL}, automating repetitive tasks and \textbf{boosting team productivity by 90\%} across multiple departments.}
+\resumeItem{Implemented a Salesforce emailing system notifying up to \textbf{5000 engineers} of KPR updates, \textbf{streamlining communication} across the organization.}
+\resumeItem{Collaborated with a 12-person engineering team to extend high-speed Internet to remote regions, reviewing LNDs and \textbf{improving connectivity for underserved communities}.}
+\resumeItem{Analyzed multi-million-dollar telecom invoices and verified program partner designs, optimizing \textbf{project delivery} and ensuring \textbf{on-time completion}.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
 
-%-----------PROJECTS-----------
 \section{Projects}
-    \resumeSubHeadingListStart       
-        \resumeProjectHeading
-          {\textbf{{\href{https://github.com/bingosuite/bingo}{BinGo}}} $|$ \textbf{\emph{Go, WebSockets, Systems Programming, Ginkgo}}}{Winter 2026}
-          \resumeItemListStart
-            \resumeItem{Built a \textbf{multi-platform visual concurrency debugger for Go}, helping developers inspect \textbf{goroutines, channels, mutexes, and synchronization behavior} through an interactive debugging workflow.}
-            \resumeItem{Engineered the \textbf{end-to-end system architecture} in \textbf{Go}, including the core debugger engine, a \textbf{session-based WebSocket server/protocol}, and an interactive client for managing sessions, execution, and managing breakpoints.}
-            \resumeItem{Implemented \textbf{cross-platform low-level debugging backends} for \textbf{Linux amd64 and macOS arm64}, using OS-specific process control and debug information to support \textbf{breakpoint handling} and runtime inspection.}
-          \resumeItemListEnd
-        \resumeProjectHeading
-          {\textbf{{\href{https://github.com/Egzavyer/QuickCV}{QuickCV}}} $|$ \textbf{\emph{Python, PyTorch, YOLOv8, OpenVINO, ONNX, OpenCV}}}{Winter 2026}
-          \resumeItemListStart
-            \resumeItem{Trained and evaluated a YOLOv8 detector on a 35K-instance KITTI dataset, achieving \textbf{0.946 mAP@0.5} and \textbf{0.98 vehicle-class mAP}, with detailed precision/recall and confusion-matrix analysis.}
-            \resumeItem{Designed a two-stage YOLOv8n→YOLOv8m cascade for CPU deployment, improving low-confidence detections by \textbf{+0.27 confidence} while avoiding second-stage inference for ~70\% of objects.}
-            \resumeItem{Reduced inference latency by \textbf{47\% (22.1s→11.6s)} and second-stage runtime by \textbf{57\% (98ms→42ms)} through OpenVINO INT8 quantization, with \textbf{no measurable accuracy loss}.}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{{\href{https://github.com/bingosuite/bingo}{BinGo}}} $|$ \textbf{\emph{Go, WebSockets, Systems Programming, Ginkgo}}}{Winter 2026}
+\resumeItemListStart
+\resumeItem{Built a \textbf{multi-platform visual concurrency debugger for Go}, helping developers inspect \textbf{goroutines, channels, mutexes, and synchronization behavior} through an interactive debugging workflow.}
+\resumeItem{Engineered the \textbf{end-to-end system architecture} in \textbf{Go}, including the core debugger engine, a \textbf{session-based WebSocket server/protocol}, and an interactive client for managing sessions, execution, and managing breakpoints.}
+\resumeItem{Implemented \textbf{cross-platform low-level debugging backends} for \textbf{Linux amd64 and macOS arm64}, using OS-specific process control and debug information to support \textbf{breakpoint handling} and runtime inspection.}
+\resumeItemListEnd
+\resumeProjectHeading
+{\textbf{{\href{https://github.com/Egzavyer/QuickCV}{QuickCV}}} $|$ \textbf{\emph{Python, PyTorch, YOLOv8, OpenVINO, ONNX, OpenCV}}}{Winter 2026}
+\resumeItemListStart
+\resumeItem{Trained and evaluated a YOLOv8 detector on a 35K-instance KITTI dataset, achieving \textbf{0.946 mAP@0.5} and \textbf{0.98 vehicle-class mAP}, with detailed precision/recall and confusion-matrix analysis.}
+\resumeItem{Designed a two-stage YOLOv8n→YOLOv8m cascade for CPU deployment, improving low-confidence detections by \textbf{+0.27 confidence} while avoiding second-stage inference for ~70\% of objects.}
+\resumeItem{Reduced inference latency by \textbf{47\% (22.1s→11.6s)} and second-stage runtime by \textbf{57\% (98ms→42ms)} through OpenVINO INT8 quantization, with \textbf{no measurable accuracy loss}.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
 
-
-
-%
-%-----------PROGRAMMING SKILLS-----------
 \section{Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Programming Languages}{: C++, C, Python, Java, SQL, TypeScript, Rust, Go} \\
-     \textbf{Spoken Languages}{: Native French and English} \\
-     \textbf{Development Tools} {: Git, Docker, Wireshark, Visual Studio, Android Studio, CMake, Gradle}\\
-     \textbf{Technologies}{: Firebase, Expo, Arduino, Linux, PostgreSQL, Unity} \\
-     \textbf{Frameworks/Libraries}{: React-Native, PyQt5, React.js, TensorFlow.js, Winsock, Spring Boot, Pytorch } \\
-    }}
- \end{itemize}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+          \textbf{Programming Languages}{: C++, C, Python, Java, SQL, TypeScript, Rust, Go} \\
+          \textbf{Spoken Languages}{: Native French and English} \\
+          \textbf{Development Tools} {: Git, Docker, Wireshark, Visual Studio, Android Studio, CMake, Gradle}\\
+          \textbf{Technologies}{: Firebase, Expo, Arduino, Linux, PostgreSQL, Unity} \\
+          \textbf{Frameworks/Libraries}{: React-Native, PyQt5, React.js, TensorFlow.js, Winsock, Spring Boot, Pytorch } \\
+        }}
+\end{itemize}
 
-
-%-------------------------------------------
 \end{document}
